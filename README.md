@@ -1,6 +1,6 @@
 # TSC-UI
 
-![LOgo](./assets/demo/tsc-ui-logo.png)
+![Logo](./assets/demo/tsc-ui-logo.png)
 
 TSC UI is tool to monitor in realtime your typescript project quality.
 
