@@ -35,7 +35,9 @@ const formatHost: ts.FormatDiagnosticsHost = {
 const createProgram = ts.createSemanticDiagnosticsBuilderProgram;
 const host = ts.createWatchCompilerHost(
     realPathOfConfig,
-    {},
+    {
+        noEmit: true, // we shouldn't compile anything
+    },
     ts.sys,
     createProgram,
     reportDiagnostic,
