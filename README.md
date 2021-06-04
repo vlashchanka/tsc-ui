@@ -7,6 +7,19 @@ TSC UI is tool to monitor in realtime your typescript project quality.
 It is based on the original tsc compiler and uses it in the background in watch mode to
 collect issues and return back to the console.
 
+Currently available features:
+
+- could show diagnostics messages list
+- calculate the number of affected files
+- calculate the number of unique error codes in the project
+- open the problematic file in the VSCode by clicking on the file path
+- find in Google the error code explanation by clicking on the error code number
+- works in watch mode and updates automatically the dashboard
+- battle-tested on a real project with 350+ diagnostics messages
+- you could have any port for the dashboard using argument
+- you could have any project path to the tsconfig.json using argument
+- has zero dependencies on installation, except Typescript itself as peer dependency and Tailwindcss (https://tailwindcss.com/) with Fontawesome (https://fontawesome.com/) loaded as external links
+
 ## Installation
 
 For local install: `npm install tsc-ui`  or `yarn add tsc-ui`
