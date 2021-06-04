@@ -1,0 +1,12 @@
+{
+  "ts-node": {
+    "transpileOnly": true
+  },
+  "compilerOptions": {
+    "strict": false,
+    "baseUrl": "./"
+  },
+  "include": [
+      "src/**/*.ts"
+  ]
+}
