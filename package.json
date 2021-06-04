@@ -1,7 +1,7 @@
 {
   "name": "tsc-ui",
-  "version": "0.0.3",
-  "description": "TSC UI",
+  "version": "0.0.4",
+  "description": "Run typescript compiler in watch mode and get project analytics in web dashboard",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [

@@ -2,7 +2,7 @@
 
 ![Logo](./assets/demo/tsc-ui-logo.png)
 
-TSC UI is tool to monitor in realtime your typescript project quality.
+**TSC UI** is a tool to monitor in realtime your typescript project quality.
 
 It is based on the original tsc compiler and uses it in the background in watch mode to
 collect issues and return back to the console.
@@ -18,7 +18,7 @@ Currently available features:
 - battle-tested on a real project with 350+ diagnostics messages
 - you could have any port for the dashboard using argument
 - you could have any project path to the tsconfig.json using argument
-- has zero dependencies on installation, except Typescript itself as peer dependency and Tailwindcss (https://tailwindcss.com/) with Fontawesome (https://fontawesome.com/) loaded as external links
+- has zero dependencies on installation, except Typescript itself as peer dependency and [Tailwindcss](https://tailwindcss.com/) with [Fontawesome](https://fontawesome.com/) loaded as external links
 
 ## Installation
 
