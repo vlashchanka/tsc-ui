@@ -1,6 +1,6 @@
 {
   "name": "tsc-ui",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "TSC UI",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -20,7 +20,25 @@
     "type": "git",
     "url": "git+https://github.com/vlashchanka/tsc-ui.git"
   },
-  "keywords": [],
+  "keywords": [
+    "typescript",
+    "dashboard",
+    "web",
+    "tsc",
+    "watch",
+    "ui",
+    "tsc-ui",
+    "typescript-lang",
+    "analytics",
+    "status",
+    "stats",
+    "statistics",
+    "monitor",
+    "monitoring",
+    "google",
+    "vscode",
+    "project"
+  ],
   "author": "vitalij.lashenko@gmail.com",
   "license": "MIT",
   "bugs": {
