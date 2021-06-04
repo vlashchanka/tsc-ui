@@ -4,9 +4,15 @@
   },
   "compilerOptions": {
     "strict": false,
+    "target": "es6",
+    "outDir": "lib",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "rootDir": "src",
     "baseUrl": "./"
   },
-  "include": [
-      "src/**/*.ts"
-  ]
+  "include": ["src"],
+  "exclude": ["node_modules", "lib"]
 }

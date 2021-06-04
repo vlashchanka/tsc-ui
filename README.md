@@ -24,6 +24,8 @@ In this page you could get your overall project analytics
 
 ## Configuration
 
-You could configure the project and port of the dashboard service:
+By default, `tsconfig.json` is used and port `3000` is taken for `tsc-ui-dashboard`.
+
+You could override the tsconfig path and port of the dashboard service:
 
 `--config=../../tsconfig.dev.json --port=4242`
