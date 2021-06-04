@@ -211,16 +211,15 @@
             } else {
                 el.classList.add("hidden");
             }
-        })
+        });
         document.querySelectorAll("[data-nav-sidebar]").forEach(el => {
             const isHome = (el.getAttribute("href") === "#" && location.hash === "");
-            console.log(el.getAttribute("href"),  location.hash, isHome);
             if (location.hash === el.getAttribute("href") || isHome) {
-                const text = el.querySelector('span')
+                const text = el.querySelector('span');
                 text.classList.add("text-white");
                 text.classList.remove("text-gray-600");
             } else {
-                const text = el.querySelector('span')
+                const text = el.querySelector('span');
                 text.classList.add("text-gray-600");
                 text.classList.remove("text-white");
             }
