@@ -1,2 +1,2 @@
-# ts-ui
-TS UI
+# tsc-ui
+TSC UI
