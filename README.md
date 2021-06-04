@@ -1,2 +1,2 @@
-# ts-reporter
-TS reporter
+# ts-ui
+TS UI
