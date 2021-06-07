@@ -17,7 +17,6 @@ function parseArgs(args: string[]): {config?: string, port?: string} {
     return options;
 }
 
-
 const diagnosticsQueue: Message[] = [];
 const port = parseInt(parsedArgs.port) || 3000;
 const configPath = parsedArgs.config || './tsconfig.json'; // let's take local by default
@@ -56,8 +55,6 @@ createServerForDashboard<Message>(diagnosticsQueue, templateVariables, {
     port: port,
     configPath: realPathOfConfig,
 });
-
-
 
 function overrideProgramCreatorWithQueueCleanup(host: ts.WatchCompilerHost<ts.SemanticDiagnosticsBuilderProgram>, queue: Message[]) {
     const origCreateProgram = host.createProgram;
