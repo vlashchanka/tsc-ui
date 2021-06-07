@@ -33,10 +33,15 @@ const formatHost: ts.FormatDiagnosticsHost = {
     getNewLine: () => ts.sys.newLine
 };
 const createProgram = ts.createSemanticDiagnosticsBuilderProgram;
+
+
 const host = ts.createWatchCompilerHost(
     realPathOfConfig,
     {
-        noEmit: true, // we shouldn't compile anything
+        ...getParsedTypescriptOptions() || {},
+        ...{
+            noEmit: true, // we shouldn't compile anything
+        }
     },
     ts.sys,
     createProgram,
@@ -51,6 +56,7 @@ createServerForDashboard<Message>(diagnosticsQueue, templateVariables, {
     port: port,
     configPath: realPathOfConfig,
 });
+
 
 
 function overrideProgramCreatorWithQueueCleanup(host: ts.WatchCompilerHost<ts.SemanticDiagnosticsBuilderProgram>, queue: Message[]) {
@@ -78,4 +84,11 @@ function getProjectName(configPath: string): string {
         return configPath.split("/").reverse()[1];
     } catch(e) {}
     return "Project"
+}
+
+function getParsedTypescriptOptions(): ts.ParsedCommandLine["options"] | null {
+    try {
+        return ts.parseCommandLine(ts.sys.args).options;
+    } catch(e) {}
+    return null
 }

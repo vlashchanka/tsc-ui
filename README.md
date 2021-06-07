@@ -19,6 +19,7 @@ Currently available features:
 - you could have any port for the dashboard using argument
 - you could have any project path to the tsconfig.json using argument
 - has zero dependencies on installation, except Typescript itself as peer dependency and [Tailwindcss](https://tailwindcss.com/) with [Fontawesome](https://fontawesome.com/) loaded as external links
+- allows overriding of used tsconfig by passing default tsc cli flags [default command line TSC options](https://www.typescriptlang.org/docs/handbook/compiler-options.html), e.g. run `tsc-ui --strict` to run compiler in strict mode
 
 ## Installation
 
@@ -59,3 +60,10 @@ By default, `./tsconfig.json` is used and port `3000` is taken for `tsc-ui-dashb
 You could override the tsconfig path and port of the dashboard service:
 
 `--config=../../tsconfig.dev.json --port=4242`
+
+## Use cases
+
+You may, e.g. need this tool in case you want to have a dashboard reporting status with different tsconfig options 
+than you have in the project.
+
+Just run with **--strict** flag   `tsc-ui --strict` to run compiler in strict mode and monitor the errors.
