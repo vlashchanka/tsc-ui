@@ -19,7 +19,7 @@ Currently available features:
 - you could have any port for the dashboard using argument
 - you could have any project path to the tsconfig.json using argument
 - has zero dependencies on installation, except Typescript itself as peer dependency and [Tailwindcss](https://tailwindcss.com/) with [Fontawesome](https://fontawesome.com/) loaded as external links
-- allows overriding of used tsconfig by passing default tsc cli flags [default command line TSC options](https://www.typescriptlang.org/docs/handbook/compiler-options.html), e.g. run `tsc-ui --strict` to run compiler in strict mode
+- allows overriding of used tsconfig options by passing default tsc cli flags [default command line TSC options](https://www.typescriptlang.org/docs/handbook/compiler-options.html), e.g. run `tsc-ui --strict` to run compiler in strict mode
 
 ## Installation
 
