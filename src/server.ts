@@ -46,7 +46,10 @@ function interpolateVars(html: string, vars: Variables) {
 
 function messagesHandler(req: http.IncomingMessage, res: http.ServerResponse) {
     return (messages: any[]) => {
-        res.writeHead(200, {'Content-Type': 'application/json'});
+        res.writeHead(200, {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*',
+        });
         res.write(JSON.stringify({
             diagnostics: messages,
             filesAffected: Array.from(new Set(messages.map(({ fileName }) => fileName))),
