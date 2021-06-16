@@ -11,7 +11,7 @@
     "tsc-ui": "./lib/index.js"
   },
   "scripts": {
-    "test": "ts-node src/index.ts",
+    "start": "ts-node src/index.ts",
     "build": "rm -rf lib && tsc && sh scripts/postbuild.sh",
     "prepare": "yarn build",
     "ci": "yarn prepare"

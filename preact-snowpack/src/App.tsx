@@ -1,6 +1,5 @@
 import {h} from 'preact';
 import {useEffect} from 'preact/hooks';
-import './App.css';
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 import Diagnostics from "./Diagnostics";

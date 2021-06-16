@@ -13,8 +13,8 @@ function Navbar() {
 
               <div class="flex w-full pt-2 content-center justify-between md:w-2/3 md:justify-end">
                   <ul class="list-reset flex justify-between flex-1 md:flex-none items-center">
-                      <li class="flex-1 md:flex-none md:mr-3"></li>
-                      <li class="flex-1 md:flex-none md:mr-3"></li>
+                      <li class="flex-1 md:flex-none md:mr-3"/>
+                      <li class="flex-1 md:flex-none md:mr-3"/>
                       <li class="flex-1 md:flex-none md:mr-3">
                           <div class="relative inline-block">
                               <span class="drop-button text-white focus:outline-none">Hi, {$user}!</span>

@@ -1,12 +1,13 @@
 import { h } from 'preact';
-import {useStore} from "./store/store";
+import { Navigation, useStore } from "./store/store";
 
 function ProjectStatus() {
-
-  const { locationHash, messages, uniqueCodes, uniqueFiles, project } = useStore('locationHash', 'messages', 'uniqueCodes','uniqueFiles', 'project');
-  const statusClass = locationHash !== '#' && locationHash !== '' ? 'hidden' : '';
+  const { navigation, messages, uniqueCodes, uniqueFiles, project } = useStore('navigation', 'messages', 'uniqueCodes','uniqueFiles', 'project');
+  if (navigation !== Navigation.Status) {
+    return null;
+  }
   return (
-      <div class={"main-content flex-1 bg-gray-100 mt-12 md:mt-2 pb-24 md:pb-5 " + statusClass}>
+      <div class={"main-content flex-1 bg-gray-100 mt-12 md:mt-2 pb-24 md:pb-5"}>
 
         <div class="bg-gray-800 pt-3">
           <div class="rounded-tl-3xl bg-gradient-to-r from-blue-500 to-gray-800 p-4 shadow text-2xl text-white">
@@ -19,7 +20,7 @@ function ProjectStatus() {
             <div class="bg-gradient-to-b from-blue-200 to-blue-100 border-b-4 border-blue-500 rounded-lg shadow-xl p-5">
               <div class="flex flex-row items-center">
                 <div class="flex-shrink pr-4">
-                  <div class="rounded-full p-5 bg-blue-600"><i class="fas fa-server fa-2x fa-inverse"></i></div>
+                  <div class="rounded-full p-5 bg-blue-600"><i class="fas fa-server fa-2x fa-inverse"/></div>
                 </div>
                 <div class="flex-1 text-right md:text-center">
                   <h5 class="font-bold uppercase text-gray-600">Files affected</h5>
@@ -32,7 +33,7 @@ function ProjectStatus() {
             <div class="bg-gradient-to-b from-indigo-200 to-indigo-100 border-b-4 border-indigo-500 rounded-lg shadow-xl p-5">
               <div class="flex flex-row items-center">
                 <div class="flex-shrink pr-4">
-                  <div class="rounded-full p-5 bg-indigo-600"><i class="fas fa-tasks fa-2x fa-inverse"></i></div>
+                  <div class="rounded-full p-5 bg-indigo-600"><i class="fas fa-tasks fa-2x fa-inverse"/></div>
                 </div>
                 <div class="flex-1 text-right md:text-center">
                   <h5 class="font-bold uppercase text-gray-600">Diagnostics</h5>
